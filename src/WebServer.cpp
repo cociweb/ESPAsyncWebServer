@@ -88,7 +88,7 @@ void AsyncWebServer::end(){
   _server.end();
 }
 
-#if ASYNC_TCP_SSL_ENABLED
+#if ASYNC_TCP_SSL_ENABLED && ASYNC_TCP_SSL_AXTLS
 void AsyncWebServer::onSslFileRequest(AcSSlFileHandler cb, void* arg){
   _server.onSslFileRequest(cb, arg);
 }
